@@ -16,6 +16,17 @@
     margin: 10% auto; /* Add 10% margin to top and bottom */
     box-sizing: border-box; /* Include padding in width/height calculations */
   }
+
+  .map-container {
+    flex: 1.5; /* Occupy less space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%; /* Match main content height */
+    overflow: visible;
+    max-width: 350px; /* Ensure it doesn't grow beyond a reasonable width */
+  }  
   
   .map-node {
     display: flex;
@@ -26,24 +37,25 @@
   }
   
   .map-circle {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: gray;
+    background-color: #333;
     margin-right: 20px; /* Space between the circle and the text */
     transition: background-color 0.3s ease-in-out;
   }
   
   .map-node.active .map-circle {
     transform: scale(1.5);
-    background-color: rgba(233, 152, 179, 0.745);
-    /* Highlight active node */
-  }
+    background-color: rgb(233, 152, 179); /* Highlight active node */
+    box-shadow: 0 0 10px 5px rgba(233, 152, 179, 0.3); /* Glow effect */
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
   
   .map-label {
     font-size: 24px;
     font-family: "Adventurer", serif;
-    color: black;
+    color: #333;
     text-align: left;
     white-space: nowrap; /* Prevent text from wrapping */
     margin-left: 10px; /* Add additional space between the circle and the text */
@@ -51,10 +63,9 @@
   
   .map-line {
     position: absolute;
-    width: 4px;
+    width: 3px;
     height: 100%;
-    background-color: gray;
-    left: 38px;
+    background-color: #333;
+    left: 36px;
     z-index: -1;
   }
-  

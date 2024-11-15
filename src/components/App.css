@@ -11,7 +11,6 @@ body {
   background: linear-gradient(135deg, #fde2e2, #e4cfff);
 }
 
-
 @font-face {
   font-family: "Adventurer";
   src: url("../assets/Adventurer.ttf") format("truetype");
@@ -41,59 +40,4 @@ p {
   overflow: hidden; /* Prevent scrolling within the main content */
   height: calc(100vh - 100px); /* Subtract header height */
   gap: 20px; /* Adds space between sections and map */
-}
-
-.sections {
-  flex: 3; /* Occupy more space compared to the map */
-  position: relative; /* Allow sections to overlap */
-  overflow: hidden; /* Prevent inner scrolling */
-  padding-left: 20px;
-}
-
-.section-title {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 38px;
-  font-family: "Adventurer", serif;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.section-content {
-  position: absolute;
-  top: 100px;
-  width: calc(100% - 80px);
-  height: calc(100% - 150px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-
-  border: 4px solid rgba(233, 152, 179, 0.5);
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(233, 152, 179, 0.3);
-  padding-left: 15px;
-}
-
-.section.active {
-  opacity: 1; /* Show the active section */
-  pointer-events: auto; /* Allow interactions */
-}
-
-.map-container {
-  flex: 1.5; /* Occupy less space */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  height: 100%; /* Match main content height */
-  overflow: visible;
-  max-width: 350px; /* Ensure it doesn't grow beyond a reasonable width */
 }

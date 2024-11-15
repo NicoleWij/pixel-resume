@@ -1,4 +1,5 @@
 import React from "react";
+import "./Section.css";
 
 const Section = ({ title, isActive }) => {
   const getContent = () => {

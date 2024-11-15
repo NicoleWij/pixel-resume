@@ -22,7 +22,6 @@ const App = () => {
     }
   };
   
-
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
