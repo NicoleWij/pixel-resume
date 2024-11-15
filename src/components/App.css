@@ -1,6 +1,6 @@
 .app {
   font-family: Arial, sans-serif;
-  position: relative; /* Make the parent element relative */
+  position: relative;
 }
 
 .header {
@@ -11,11 +11,11 @@
 }
 
 .sections {
-  position: absolute; /* Make sections overlap */
-  top: 100px; /* Adjust this for spacing from the header */
-  left: 10%; /* Align sections on the left */
-  width: 70%; /* Adjust width */
-  height: calc(100vh - 100px); /* Full height minus the header height */
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  width: 60%;
+  height: calc(100vh - 100px);
 }
 
 .section {
@@ -25,24 +25,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  pointer-events: none; /* Prevent interactions when not active */
+  pointer-events: none;
 }
 
 .section.active {
-  opacity: 1; /* Only the active section is visible */
-  pointer-events: auto; /* Allow interactions for the active section */
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .character {
   position: fixed;
-  right: 20%; /* Adjust position for character on the right */
-  top: 50%; /* Start the character vertically centered */
-  transform: translateY(-50%); /* Center the sprite */
-  width: 32px; /* Character sprite dimensions */
+  right: 20%;
+  top: 50%;
+  transform: translateY(-500%);
+  width: 32px;
   height: 48px;
-  overflow: hidden; /* Show only one frame */
+  overflow: hidden;
 }
 
 .sprite {
@@ -52,12 +52,11 @@
   animation: walk 0.8s steps(4) infinite;
 }
 
-
 @keyframes walk {
   from {
     background-position: 0 0;
   }
   to {
-    background-position: -128px 0; /* Animate through the sprite sheet */
+    background-position: -128px 0;
   }
 }

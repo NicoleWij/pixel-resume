@@ -1,20 +1,16 @@
 import React from "react";
-import characterSprite from '../assets/character.png'; // Adjust the path if needed
+import characterSprite from "../assets/character.png";
 
 const Character = ({ activeSectionIndex }) => {
   return (
     <div
       className="character"
       style={{
-        top: `calc(50% + ${activeSectionIndex * 100}px)`, // Adjust the vertical position
+        top: `calc(50% + ${activeSectionIndex * 170}px)`,
+        backgroundImage: `url(${characterSprite})`,
       }}
     >
-      <div
-        className="sprite"
-        style={{
-          backgroundImage: `url(${characterSprite})`, // Use the imported sprite
-        }}
-      ></div>
+      <div className="sprite"></div>
     </div>
   );
 };

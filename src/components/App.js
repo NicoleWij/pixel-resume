@@ -7,7 +7,7 @@ import Character from "./Character";
 const App = () => {
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
 
-  const sections = ["Education", "Experience", "Skills"];
+  const sections = ["About Me", "Experience", "Education", "Skills"];
 
   const handleKeyDown = (e) => {
     if (e.key === "ArrowDown" && activeSectionIndex < sections.length - 1) {
