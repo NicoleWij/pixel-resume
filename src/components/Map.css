@@ -36,7 +36,7 @@
   
   .map-node.active .map-circle {
     transform: scale(1.5);
-    background-color: #222;
+    background-color: rgba(233, 152, 179, 0.745);
     /* Highlight active node */
   }
   
