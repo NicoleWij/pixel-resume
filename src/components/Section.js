@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const Section = ({ title, isActive }) => {
   const getContent = () => {
     switch (title) {
-      case 'About Me':
+      case "About Me":
         return (
           <div>
             <p>
@@ -13,7 +13,7 @@ const Section = ({ title, isActive }) => {
             </p>
           </div>
         );
-      case 'Experience':
+      case "Experience":
         return (
           <div>
             <h3>Cogig – Female Leader Engineer</h3>
@@ -30,7 +30,7 @@ const Section = ({ title, isActive }) => {
             </p>
           </div>
         );
-      case 'Education':
+      case "Education":
         return (
           <div>
             <h3>Master’s Programme in Computer Science</h3>
@@ -42,7 +42,7 @@ const Section = ({ title, isActive }) => {
             <p>Hong Kong University of Science and Technology (2022)</p>
           </div>
         );
-      case 'Skills':
+      case "Skills":
         return (
           <div>
             <h3>Technical Skills</h3>
@@ -59,16 +59,20 @@ const Section = ({ title, isActive }) => {
   };
 
   return (
-    <section
-      className={`section ${isActive ? 'active' : ''}`}
-      style={{
-        opacity: isActive ? 1 : 0,
-        transition: 'opacity 0.5s ease-in-out',
-      }}
-    >
-      <h2>{title}</h2>
-      {getContent()}
-    </section>
+    <div className={`section ${isActive ? "active" : ""}`}>
+      {/* Show the title only for the active section */}
+      {isActive && <div className="section-title">{title}</div>}
+      <div
+        className="section-content"
+        style={{
+          opacity: isActive ? 1 : 0,
+          visibility: isActive ? "visible" : "hidden",
+          transition: "opacity 0.5s ease-in-out, visibility 0.5s ease-in-out",
+        }}
+      >
+        {getContent()}
+      </div>
+    </div>
   );
 };
 

@@ -1,20 +1,28 @@
-.map {
-    position: fixed;
-    right: 15%; /* Keep the map near the character */
-    top: calc(100px + 10%); /* Adjust top to be 10% below the header */
-    bottom: 10%; /* Stop 10% above the bottom of the screen */
+@font-face {
+    font-family: "Adventurer";
+    src: url("../assets/Adventurer.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }    
+
+  .map {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly; /* Distribute nodes evenly */
     align-items: flex-start; /* Align everything to the left */
-    justify-content: space-between;
+    width: 100%; /* Full width */
+    height: 80%; /* Map occupies 80% of the available space */
+    margin: 10% auto; /* Add 10% margin to top and bottom */
+    box-sizing: border-box; /* Include padding in width/height calculations */
   }
   
   .map-node {
     display: flex;
-    flex-direction: row; /* Place the character and circle on the same row */
+    flex-direction: row; /* Character and circle in a row */
     align-items: center;
-    position: relative;
-    margin-left: 30px; /* Add left margin to move the map away from the character */
+    margin-left: 30px; /* Spacing between character and map */
+    position: relative; /* Ensure character is positioned relative to node */
   }
   
   .map-circle {
@@ -27,12 +35,14 @@
   }
   
   .map-node.active .map-circle {
-    background-color: red;
+    transform: scale(1.5);
+    background-color: #222;
     /* Highlight active node */
   }
   
   .map-label {
-    font-size: 14px;
+    font-size: 24px;
+    font-family: "Adventurer", serif;
     color: black;
     text-align: left;
     white-space: nowrap; /* Prevent text from wrapping */

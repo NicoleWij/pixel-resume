@@ -14,7 +14,9 @@ const Map = ({ activeSectionIndex, direction }) => {
         >
           {/* Render the Character component next to the active map node */}
           {index === activeSectionIndex && (
-            <Character activeSectionIndex={activeSectionIndex} direction={direction} />
+            <Character
+              activeSectionIndex={activeSectionIndex}
+              direction={direction} />
           )}
           <div className="map-circle"></div>
           <span className="map-label">{section}</span>

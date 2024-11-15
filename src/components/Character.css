@@ -1,10 +1,10 @@
 .character {
     position: absolute;
-    left: -40px;
-    width: 32px; /* Width of one frame */
-    height: 48px; /* Height of one frame */
+    left: -60px; /* Shift the character 40px to the left of the node */
+    width: 32px; /* Adjust for sprite dimensions */
+    height: 48px; /* Adjust for sprite dimensions */
     overflow: hidden;
-    background-size: 128px 192px; /* Dimensions of the full sprite sheet */
+    background-size: 128px 192px; /* Sprite sheet dimensions */
     background-repeat: no-repeat;
   }
   

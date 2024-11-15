@@ -1,6 +1,10 @@
 .app {
   font-family: Arial, sans-serif;
   position: relative;
+  display: flex;
+  flex-direction: column; /* Stack header on top of the main content */
+  height: 100vh; /* Use full viewport height */
+  overflow: hidden; /* Prevent scrolling */
 }
 
 @font-face {
@@ -32,38 +36,64 @@ p {
   padding: 10px;
   text-align: center;
   height: 100px;
+  flex-shrink: 0; /* Prevent the header from shrinking */
+}
+
+.main-content {
+  display: flex; /* Horizontal layout for sections and map */
+  flex-grow: 1;
+  overflow: hidden; /* Prevent scrolling within the main content */
+  height: calc(100vh - 100px); /* Subtract header height */
+  gap: 20px; /* Adds space between sections and map */
 }
 
 .sections {
-  position: absolute;
-  top: 100px;
-  left: 10%;
-  width: 60%;
-  height: calc(100vh - 100px);
+  flex: 3; /* Occupy more space compared to the map */
+  position: relative; /* Allow sections to overlap */
+  overflow: hidden; /* Prevent inner scrolling */
+  padding-left: 20px;
 }
 
-.section {
+.section-title {
   position: absolute;
+  top: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  pointer-events: none;
-}
-
-.section.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.map-container {
-  position: fixed;
-  right: 25%; /* Adjust this based on your layout */
-  top: 20%; /* Align with the character */
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 38px;
+  font-family: "Adventurer", serif;
+  background-color: white;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.section-content {
+  position: absolute;
+  top: 50px;
+  width: 95%;
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section.active {
+  opacity: 1; /* Show the active section */
+  pointer-events: auto; /* Allow interactions */
+}
+
+.map-container {
+  flex: 1.5; /* Occupy less space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%; /* Match main content height */
+  overflow: visible;
+  max-width: 350px; /* Ensure it doesn't grow beyond a reasonable width */
 }
