@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./Header";
 import Section from "./Section";
@@ -6,18 +6,21 @@ import Character from "./Character";
 
 const App = () => {
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
+  const [direction, setDirection] = useState("down"); // Track direction
 
   const sections = ["About Me", "Experience", "Education", "Skills"];
 
   const handleKeyDown = (e) => {
     if (e.key === "ArrowDown" && activeSectionIndex < sections.length - 1) {
-      setActiveSectionIndex(activeSectionIndex + 1);
+      setDirection("down");
+      setActiveSectionIndex((prevIndex) => prevIndex + 1);
     } else if (e.key === "ArrowUp" && activeSectionIndex > 0) {
-      setActiveSectionIndex(activeSectionIndex - 1);
+      setDirection("up");
+      setActiveSectionIndex((prevIndex) => prevIndex - 1);
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
@@ -36,7 +39,7 @@ const App = () => {
           />
         ))}
       </div>
-      <Character activeSectionIndex={activeSectionIndex} />
+      <Character activeSectionIndex={activeSectionIndex} direction={direction} />
     </div>
   );
 };

@@ -38,25 +38,36 @@
 .character {
   position: fixed;
   right: 20%;
-  top: 50%;
-  transform: translateY(-500%);
-  width: 32px;
-  height: 48px;
+  width: 32px; /* Width of one frame */
+  height: 48px; /* Height of one frame */
   overflow: hidden;
+  background-size: 128px 192px; /* Dimensions of the full sprite sheet */
 }
 
-.sprite {
-  width: 128px;
-  height: 48px;
-  background: url('../assets/character.png') no-repeat;
-  animation: walk 0.8s steps(4) infinite;
+.character.down {
+  background-position: 0px 0px;
+  animation: walkDown 0.8s steps(4) infinite; /* Animation for the "down" direction */
 }
 
-@keyframes walk {
+.character.up {
+  background-position: 0px -144px;
+  animation: walkUp 0.8s steps(4) infinite; /* Animation for the "up" direction */
+}
+
+@keyframes walkDown {
   from {
-    background-position: 0 0;
+    background-position: 0px 0px; /* First row, start at first frame */
   }
   to {
-    background-position: -128px 0;
+    background-position: -128px 0px; /* First row, end at last frame */
+  }
+}
+
+@keyframes walkUp {
+  from {
+    background-position: 0px -144px; /* Second row, start at first frame */
+  }
+  to {
+    background-position: -128px -144px; /* Second row, end at last frame */
   }
 }
