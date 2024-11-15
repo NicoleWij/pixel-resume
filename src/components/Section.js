@@ -6,7 +6,6 @@ const Section = ({ title, isActive }) => {
       case 'About Me':
         return (
           <div>
-            <h3>About Me</h3>
             <p>
               Hi! I'm a passionate software developer with experience in frontend development,
               DevOps, and leadership programs. Use the arrow keys to navigate through the sections of

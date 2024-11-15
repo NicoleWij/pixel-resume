@@ -3,11 +3,35 @@
   position: relative;
 }
 
+@font-face {
+  font-family: "Adventurer";
+  src: url("../assets/Adventurer.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Adventurer", serif;
+}
+
+h2 {
+  font-family: "Adventurer", serif;
+}
+
+h3 {
+  font-family: "Adventurer", serif;
+}
+
+p {
+  font-family: "Adventurer", serif;
+}
+
 .header {
   background-color: #222;
   color: white;
   padding: 10px;
   text-align: center;
+  height: 100px;
 }
 
 .sections {
@@ -35,39 +59,11 @@
   pointer-events: auto;
 }
 
-.character {
+.map-container {
   position: fixed;
-  right: 20%;
-  width: 32px; /* Width of one frame */
-  height: 48px; /* Height of one frame */
-  overflow: hidden;
-  background-size: 128px 192px; /* Dimensions of the full sprite sheet */
-}
-
-.character.down {
-  background-position: 0px 0px;
-  animation: walkDown 0.8s steps(4) infinite; /* Animation for the "down" direction */
-}
-
-.character.up {
-  background-position: 0px -144px;
-  animation: walkUp 0.8s steps(4) infinite; /* Animation for the "up" direction */
-}
-
-@keyframes walkDown {
-  from {
-    background-position: 0px 0px; /* First row, start at first frame */
-  }
-  to {
-    background-position: -128px 0px; /* First row, end at last frame */
-  }
-}
-
-@keyframes walkUp {
-  from {
-    background-position: 0px -144px; /* Second row, start at first frame */
-  }
-  to {
-    background-position: -128px -144px; /* Second row, end at last frame */
-  }
+  right: 25%; /* Adjust this based on your layout */
+  top: 20%; /* Align with the character */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

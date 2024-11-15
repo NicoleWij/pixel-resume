@@ -1,0 +1,40 @@
+.character {
+    position: absolute;
+    left: -40px;
+    width: 32px; /* Width of one frame */
+    height: 48px; /* Height of one frame */
+    overflow: hidden;
+    background-size: 128px 192px; /* Dimensions of the full sprite sheet */
+    background-repeat: no-repeat;
+  }
+  
+  .character.down {
+    background-image: url("../assets/character.png"); /* Set the sprite image */
+    background-position: 0px 0px; /* First row */
+    animation: walkDown 0.8s steps(4) infinite; /* Animation for the "down" direction */
+  }
+  
+  .character.up {
+    background-image: url("../assets/character.png"); /* Set the sprite image */
+    background-position: 0px -144px; /* Second row */
+    animation: walkUp 0.8s steps(4) infinite; /* Animation for the "up" direction */
+  }
+  
+  @keyframes walkDown {
+    from {
+      background-position: 0px 0px; /* First row, start at first frame */
+    }
+    to {
+      background-position: -128px 0px; /* First row, end at last frame */
+    }
+  }
+  
+  @keyframes walkUp {
+    from {
+      background-position: 0px -144px; /* Fourth row, start at first frame */
+    }
+    to {
+      background-position: -128px -144px; /* Fourth row, end at last frame */
+    }
+  }
+  

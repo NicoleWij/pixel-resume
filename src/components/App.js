@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Header";
 import Section from "./Section";
 import Character from "./Character";
+import Map from './Map';
 
 const App = () => {
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
@@ -39,7 +40,9 @@ const App = () => {
           />
         ))}
       </div>
-      <Character activeSectionIndex={activeSectionIndex} direction={direction} />
+      <div className="map-container">
+        <Map activeSectionIndex={activeSectionIndex} direction={direction} />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,50 @@
+.map {
+    position: fixed;
+    right: 15%; /* Keep the map near the character */
+    top: calc(100px + 10%); /* Adjust top to be 10% below the header */
+    bottom: 10%; /* Stop 10% above the bottom of the screen */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
+    justify-content: space-between;
+  }
+  
+  .map-node {
+    display: flex;
+    flex-direction: row; /* Place the character and circle on the same row */
+    align-items: center;
+    position: relative;
+    margin-left: 30px; /* Add left margin to move the map away from the character */
+  }
+  
+  .map-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 20px; /* Space between the circle and the text */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .map-node.active .map-circle {
+    background-color: red;
+    /* Highlight active node */
+  }
+  
+  .map-label {
+    font-size: 14px;
+    color: black;
+    text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin-left: 10px; /* Add additional space between the circle and the text */
+  }
+  
+  .map-line {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: gray;
+    left: 38px;
+    z-index: -1;
+  }
+  
