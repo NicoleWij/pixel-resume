@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <Header />
+      <Header activeSection={sections[activeSectionIndex]} />
       <div className="main-content">
         <div className="sections">
           {sections.map((title, index) => (

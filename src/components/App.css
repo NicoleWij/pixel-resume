@@ -35,15 +35,6 @@ p {
   font-family: "Adventurer", serif;
 }
 
-.header {
-  background-color: #222;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  height: 100px;
-  flex-shrink: 0; /* Prevent the header from shrinking */
-}
-
 .main-content {
   display: flex; /* Horizontal layout for sections and map */
   flex-grow: 1;
