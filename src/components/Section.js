@@ -1,17 +1,61 @@
 import React from "react";
 import "./Section.css";
+import RotatingAvatar from "./RotatingAvatar";
 
 const Section = ({ title, isActive }) => {
   const getContent = () => {
     switch (title) {
       case "About Me":
         return (
-          <div>
-            <p>
-              Hi! I'm a passionate software developer with experience in frontend development,
-              DevOps, and leadership programs. Use the arrow keys to navigate through the sections of
-              my resume!
-            </p>
+          <div className="sub-section-content">
+            {/* Left Column: Personal Information */}
+            <div className="info-column">
+              <h3 className="subheader">Information About Me</h3>
+              <div className="subcontent">
+                <p className="subcontent-item">
+                  Ever since I can remember, I've been captivated by technology and video games. From tinkering with my first console to learning to code, I’ve always loved the intersection of creativity and logic that tech brings!
+                </p>
+                <p className="subcontent-item">
+                  Now, as a future software developer, I specialize in frontend development and DevOps, combining my passion for design with technical problem-solving. I thrive on creating interactive, engaging user experiences and am always eager to learn and explore new tools and frameworks.
+                </p>
+                <p className="subcontent-item">
+                  Beyond coding, I'm a social and curious individual who enjoys connecting with people, collaborating on exciting projects, and finding innovative solutions. When I’m not writing code, you can find me immersed in the latest RPG or strategizing over board games with friends!
+                </p>
+              </div>
+            </div>
+            {/* Middle Column: Links */}
+            <div className="section-column">
+              <h3 className="subheader">Links</h3>
+              <div className="subcontent">
+                <p>
+                  <button className="cute-button">
+                    <a href="https://www.linkedin.com/in/nicole-wijkman-ab3167180/" target="_blank" rel="noopener noreferrer">
+                      LinkedIn
+                    </a>
+                  </button>
+                </p>
+                <p>
+                  <button className="cute-button">
+                    <a href="https://github.com/NicoleWij" target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                  </button>
+                </p>
+                <p>
+                  <button className="cute-button">Something Else</button>
+                </p>
+              </div>
+              <h3 className="subheader">Contact Info</h3>
+              <div className="subcontent">
+                <li>Email: nicole.wijkman@gmail.com</li>
+                <li>Phone: +46 73 938 50 61</li>
+              </div>
+            </div>
+
+            {/* Right Column: Avatar */}
+            <div className="section-column">
+              <RotatingAvatar />
+            </div>
           </div>
         );
       case "Experience":
@@ -63,12 +107,12 @@ const Section = ({ title, isActive }) => {
                 <p className="subcontent-item">
                   <strong>Cogig - Female Leader Engineer</strong> <br />
                   Sep 2024 - Present <br />
-                  Participated in a selective leadership program focusing on professional development.
+                  Participated in a selective leadership program via CoGig focusing on professional development.
                 </p>
                 <p className="subcontent-item">
                   <strong>Netlight Tech Avenue</strong> <br />
                   Nov 2024 - Present<br />
-                  Engaged in a tech-focused event series, contributing to discussions on software innovation
+                  Participated in a tech-focused event series at Netlight, contributing to discussions on software innovation
                   and problem-solving.
                 </p>
               </div>
@@ -129,7 +173,7 @@ const Section = ({ title, isActive }) => {
             {/* Right Column: Leadership & Project Management */}
             <div className="section-column">
               <h3 className="subheader">Project Management</h3>
-              <ul className="subcontent">
+              <div className="subcontent">
                 <li>
                   <strong>Agile & Scrum Methodologies:</strong> Experienced in leading teams using Agile frameworks to manage projects efficiently.
                 </li>
@@ -139,13 +183,13 @@ const Section = ({ title, isActive }) => {
                 <li>
                   <strong>Strategic Planning:</strong> Skilled in devising and executing project plans that align with organizational objectives.
                 </li>
-              </ul>
+              </div>
             </div>
 
             {/* Middle Column: Skills & Areas of Interest */}
             <div className="section-column">
               <h3 className="subheader">Skills & Areas of Interest</h3>
-              <ul className="subcontent">
+              <div className="subcontent">
                 <li>
                   <strong>Frontend Development:</strong> Building responsive, interactive UIs with modern JavaScript frameworks.
                 </li>
@@ -158,20 +202,21 @@ const Section = ({ title, isActive }) => {
                 <li>
                   <strong>Innovation:</strong> Exploring new technologies to enhance projects and solve complex problems.
                 </li>
-              </ul>
+              </div>
             </div>
 
             {/* Left Column: Programming Languages */}
             <div className="section-column">
               <h3 className="subheader">Programming Languages</h3>
-              <ul className="subcontent">
+              <div className="subcontent">
                 <li>Java</li>
                 <li>JavaScript</li>
                 <li>C/C++</li>
                 <li>Python</li>
                 <li>Elixir</li>
+                <li>Clojure</li>
                 <li>HTML/CSS</li>
-              </ul>
+              </div>
             </div>
           </div>
         );
