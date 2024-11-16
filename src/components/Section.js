@@ -28,7 +28,7 @@ const Section = ({ title, isActive }) => {
                 <p className="subcontent-item">Phone: +46 73 938 50 61</p>
               </div>
               <div className="subcontent">
-                <p>
+                <div className="button-column">
                   <a
                     href="https://www.linkedin.com/in/nicole-wijkman-ab3167180/"
                     target="_blank"
@@ -37,8 +37,6 @@ const Section = ({ title, isActive }) => {
                   >
                     LinkedIn
                   </a>
-                </p>
-                <p>
                   <a
                     href="https://github.com/NicoleWij"
                     target="_blank"
@@ -47,7 +45,7 @@ const Section = ({ title, isActive }) => {
                   >
                     GitHub
                   </a>
-                </p>
+                </div>
               </div>
             </div>
 
