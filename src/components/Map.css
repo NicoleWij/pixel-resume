@@ -47,8 +47,8 @@
   
   .map-node.active .map-circle {
     transform: scale(1.5);
-    background-color: rgb(233, 152, 179); /* Highlight active node */
-    box-shadow: 0 0 10px 5px rgba(233, 152, 179, 0.3); /* Glow effect */
+    background-color: #121212; /* Highlight active node */
+    box-shadow: 0 0 10px 5px #473b4858; /* Glow effect */
     transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
   

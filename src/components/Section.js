@@ -67,7 +67,7 @@ const Section = ({ title, isActive }) => {
                 </p>
                 <p className="subcontent-item">
                   <strong>Netlight Tech Avenue</strong> <br />
-                  2024 <br />
+                  Nov 2024 - Present<br />
                   Engaged in a tech-focused event series, contributing to discussions on software innovation
                   and problem-solving.
                 </p>
