@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Header.css";
 import cloudImage from "../assets/Cloud.png";
-import arrowImage from "../assets/Arrow.png";
+import RotatingArrows from "./RotatingArrows"; // Import the RotatingArrows component
 
 const Header = ({ activeSection }) => {
   const sectionTitles = {
@@ -18,7 +18,7 @@ const Header = ({ activeSection }) => {
         <h1>{sectionTitles[activeSection] || "Nicole's Resume"}</h1>
       </div>
       <div className="arrow-instruction">
-        <img src={arrowImage} alt="Arrow keys" className="arrow-image" />
+        <RotatingArrows />
         <span>Use the arrows to navigate!</span>
       </div>
     </div>

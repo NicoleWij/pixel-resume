@@ -41,11 +41,6 @@
     gap: 10px;
 }
 
-.arrow-image {
-    width: 120px;
-    height: auto;
-}
-
 .arrow-instruction span {
     font-family: "Adventurer", serif;
     font-size: 18px;
@@ -53,6 +48,18 @@
     text-align: center;
     white-space: nowrap; /* Prevent text wrapping */
 }
+
+.rotating-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .rotating-arrow-image {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+  }  
   
   @keyframes bounce {
     0%, 100% {
