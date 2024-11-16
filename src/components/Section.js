@@ -16,39 +16,38 @@ const Section = ({ title, isActive }) => {
                   Ever since I can remember, I've been captivated by technology and video games. From tinkering with my first console to learning to code, I’ve always loved the intersection of creativity and logic that tech brings!
                 </p>
                 <p className="subcontent-item">
-                  Now, as a future software developer, I specialize in frontend development and DevOps, combining my passion for design with technical problem-solving. I thrive on creating interactive, engaging user experiences and am always eager to learn and explore new tools and frameworks.
-                </p>
-                <p className="subcontent-item">
-                  Beyond coding, I'm a social and curious individual who enjoys connecting with people, collaborating on exciting projects, and finding innovative solutions. When I’m not writing code, you can find me immersed in the latest RPG or strategizing over board games with friends!
+                  Now, as a future software developer, I specialize in frontend development and DevOps, combining my passion for design with technical problem-solving. I thrive on creating interactive, engaging user experiences and am always eager to learn and explore new tools and frameworks!
                 </p>
               </div>
             </div>
             {/* Middle Column: Links */}
             <div className="section-column">
-              <h3 className="subheader">Links</h3>
-              <div className="subcontent">
-                <p>
-                  <button className="cute-button">
-                    <a href="https://www.linkedin.com/in/nicole-wijkman-ab3167180/" target="_blank" rel="noopener noreferrer">
-                      LinkedIn
-                    </a>
-                  </button>
-                </p>
-                <p>
-                  <button className="cute-button">
-                    <a href="https://github.com/NicoleWij" target="_blank" rel="noopener noreferrer">
-                      GitHub
-                    </a>
-                  </button>
-                </p>
-                <p>
-                  <button className="cute-button">Something Else</button>
-                </p>
-              </div>
               <h3 className="subheader">Contact Info</h3>
+              <div>
+                <p className="subcontent-item">Email: nicole.wijkman@gmail.com</p>
+                <p className="subcontent-item">Phone: +46 73 938 50 61</p>
+              </div>
               <div className="subcontent">
-                <li>Email: nicole.wijkman@gmail.com</li>
-                <li>Phone: +46 73 938 50 61</li>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/nicole-wijkman-ab3167180/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="image-button"
+                  >
+                    LinkedIn
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/NicoleWij"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="image-button"
+                  >
+                    GitHub
+                  </a>
+                </p>
               </div>
             </div>
 

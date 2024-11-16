@@ -18,6 +18,13 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "TimesNewPixel";
+  src: url("../assets/TimesNewPixel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
   font-family: "Adventurer", serif;
 }

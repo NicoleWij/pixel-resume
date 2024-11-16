@@ -60,21 +60,20 @@
 
 .info-column {
   flex: 1.5;
-  border-radius: 10px;
-  padding: 15px;
+  padding: 10px;
 }
 
 .subheader {
   font-family: "Adventurer", serif;
   font-size: 20px;
-  color: #a391ab;
+  color: #7d6a85;
   margin-bottom: 10px;
   border-bottom: 2px solid #a391ab;
 }
 
 .subcontent {
-  font-family: "Adventurer", serif;
-  font-size: 14px;
+  font-family: "TimesNewPixel", serif;
+  font-size: 18px;
   color: #333;
   line-height: 1.5;
   margin-bottom: 15px;
@@ -85,6 +84,8 @@
 
 .subcontent-item {
   margin-bottom: 15px;
+  font-family: "TimesNewPixel", serif;
+  font-size: 18px;
 }
 
 .sub-section-content::-webkit-scrollbar {
@@ -104,32 +105,6 @@
 .sub-section-content::-webkit-scrollbar-track {
   background-color: rgba(245, 245, 245, 1);
   border-radius: 10px;
-}
-
-.cute-button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background: #a391ab;
-  color: white;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  text-align: center;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cute-button a {
-  text-decoration: none;
-  color: white;
-}
-
-.cute-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .avatar {
@@ -154,4 +129,32 @@
     width: 50%;
     margin: 0 auto;
   }
+}
+
+
+.image-button {
+  display: inline-block;
+  width: 130px; /* Adjust width based on image size */
+  height: 75px; /* Adjust height based on image size */
+  background-image: url("../assets/Buton.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "TimesNewPixel", serif;
+  font-size: 22px;
+  text-align: center;
+  line-height: 65px; /* Match with height for centering text */
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.image-button:hover {
+  background-image: url("../assets/ButtonClicked.png");
+  line-height: 75px;
+}
+
+.image-button a {
+  color: inherit;
+  text-decoration: none;
 }
