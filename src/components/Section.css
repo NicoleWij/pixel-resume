@@ -151,7 +151,8 @@
 
 .image-button:hover {
   background-image: url("../assets/ButtonClicked.png");
-  line-height: 75px;
+  line-height: 73px;
+  text-indent: -3px;
 }
 
 .image-button a {
