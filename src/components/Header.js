@@ -6,9 +6,9 @@ import RotatingArrows from "./RotatingArrows"; // Import the RotatingArrows comp
 const Header = ({ activeSection }) => {
   const sectionTitles = {
     "About Me": "Welcome to Nicole's World!",
-    "Experience": "Nicole's Journey",
-    "Education": "Nicole's Learning Path",
-    "Skills": "Nicole's Toolbox"
+    "Experience": "My Journey",
+    "Education": "My Learning Path",
+    "Skills": "My Toolbox"
   };
 
   return (
