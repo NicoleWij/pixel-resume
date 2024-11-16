@@ -101,3 +101,15 @@
 .subcontent li {
   margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+  .sub-section-content {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 10px; /* Reduce the gap between sections */
+  }
+
+  .section-column {
+    flex: none; /* Prevent columns from sharing space */
+    width: 100%; /* Make each section take full width */
+  }
+}
