@@ -1,21 +1,28 @@
 .header-container {
     position: relative;
     margin: 20px auto;
-    padding: 20px 40px;
-    background: rgb(245, 245, 245);
-    border-radius: 25px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    animation: colorShift 5s infinite;
     text-align: center;
-    width: fit-content; /* Shrink to content size */
+    animation: bounce 2s ease-in-out infinite; /* Keep the bouncing animation */
+    width: fit-content; /* Shrink to fit the cloud and text */
+    height: 100px; /* Adjust to accommodate the cloud image and text */
+  }
+  
+  .header-image {
+    width: 500px; /* Adjust size of the cloud */
+    height: 150px; /* Maintain aspect ratio */
   }
   
   .header-container h1 {
     font-family: "Adventurer", serif;
-    font-size: 24px;
+    font-size: 24px; /* Adjust font size if necessary */
     color: #333;
+    position: absolute;
+    top: 83%; /* Adjust to place text better relative to the larger cloud */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Keep the text centered */
+    white-space: nowrap; /* Prevent text from wrapping */
   }
-
+  
   @keyframes bounce {
     0%, 100% {
       transform: translateY(0);
@@ -24,9 +31,4 @@
       transform: translateY(-10px);
     }
   }
-  
-  .header-container {
-    animation: colorShift 5s infinite, bounce 2s ease-in-out infinite;
-  }
-  
   
