@@ -13,7 +13,7 @@ const Section = ({ title, isActive }) => {
               <h3 className="subheader">Information About Me</h3>
               <div className="subcontent">
                 <p className="subcontent-item">
-                  Ever since I can remember, I've been captivated by technology and video games. From tinkering with my first console to learning to code, I’ve always loved the intersection of creativity and logic that tech brings!
+                  Ever since I can remember, I've been interested by technology and video games. From tinkering with my first console to learning to code, I’ve always loved the intersection of creativity and logic that tech brings!
                 </p>
                 <p className="subcontent-item">
                   Now, as a future software developer, I specialize in frontend development and DevOps, combining my passion for design with technical problem-solving. I thrive on creating interactive, engaging user experiences and am always eager to learn and explore new tools and frameworks!
