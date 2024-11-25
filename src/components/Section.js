@@ -48,11 +48,6 @@ const Section = ({ title, isActive }) => {
                 </div>
               </div>
             </div>
-
-            {/* Right Column: Avatar */}
-            <div className="section-column">
-              <RotatingAvatar />
-            </div>
           </div>
         );
       case "Experience":
