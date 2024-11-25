@@ -4,7 +4,7 @@
 
 [Visit the deployed website here](https://nicoles-website-world.web.app)
 
-This project is a work in progress interactive, pixel-art-inspired resume that showcases my journey, skills, and experiences as a software developer with a passion for video games and technology.
+This project is a ***work in progress*** interactive, pixel-art-inspired resume that showcases my journey, skills, and experiences as a software developer with a passion for video games and technology.
 
 ---
 
