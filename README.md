@@ -11,9 +11,9 @@ This project is a ***work in progress*** interactive, pixel-art-inspired resume 
 ## Features
 
 - **Interactive Navigation**: Use the arrow keys to navigate through sections of the resume.
-- **Pixel Art Design**: A nostalgic and unique aesthetic that reflects creativity and technical skills.
+- **Pixel Art Design**: A nostalgic and unique aesthetic.
 - **Animated Character**: A dynamic sprite accompanies the user as they navigate the resume.
-- **Responsive Layout**: Optimized for different screen sizes and devices.
+- **Responsive Layout**: (Somewhat) Optimized for different screen sizes and devices.
 - **Accessible Information**: Quick access to contact information, LinkedIn, and GitHub links.
 
 ---
